@@ -1,0 +1,16 @@
+﻿@model CLDVSem2Part3.Models.UserModel
+
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<p>Enter Customer Details.</p>
+
+<body>
+    <form action="/User/User" method="post">
+        <input type="text" name="FIrstName" placeholder="FirstName" required>
+        <input type="text" name="SecondName" placeholder="SecondName" required>
+        <input type="text" name="Email" placeholder="Email" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
