@@ -1,0 +1,17 @@
+﻿@model CLDVSem2Part3.Models.ProductModel
+@{
+    ViewData["Title"] = "Products";
+    <p>Enter a new product to be sold.</p>
+
+}
+
+
+
+<body>
+    <form action="/Product/Privacy" method="post">
+        <p>Insert new products</p>
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="text" name="Price" placeholder="Price" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>

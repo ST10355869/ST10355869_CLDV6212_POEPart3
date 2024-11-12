@@ -12,13 +12,13 @@ namespace CLDVSem2Part3.Models
 
         public string Name { get; set; }
 
-        public string Price { get; set; }
+        public int Price { get; set; }
 
        
 
 
 
-        public int insert_product(ProductModel p)
+        public int Insert_Product(ProductModel p)
         {
 
             try
@@ -26,17 +26,18 @@ namespace CLDVSem2Part3.Models
                 string sql = "INSERT INTO Product (Name, Price) VALUES (@Name, @Price)";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Name", p.Name);
-                cmd.Parameters.AddWithValue("@Price", p.Price);
-                
+                cmd.Parameters.AddWithValue("@Price", p.Price);              
                 con.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
-                con.Close();
                 return rowsAffected;
             }
             catch (Exception ex)
             {
-                
                 throw ex;
+            }
+            finally
+            {
+                con.Close();
             }
 
 

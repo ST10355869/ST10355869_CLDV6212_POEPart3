@@ -10,14 +10,14 @@ namespace CLDVSem2Part3.Controllers
 
 
         [HttpPost]
-        public ActionResult MyWork(ProductModel products)
+        public ActionResult Privacy(ProductModel products)
         {
-            var result2 = product.insert_product(products);
+            var result = product.Insert_Product(products);
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
-        public ActionResult MyWork()
+        public ActionResult Privacy()
         {
             return View(product);
         }
