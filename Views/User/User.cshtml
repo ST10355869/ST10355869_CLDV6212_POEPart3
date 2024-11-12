@@ -4,13 +4,72 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<p>Enter Customer Details.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
 
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #75b3f0;
+        }
+    </style>
+</head>
 <body>
-    <form action="/User/User" method="post">
-        <input type="text" name="FIrstName" placeholder="FirstName" required>
-        <input type="text" name="SecondName" placeholder="SecondName" required>
-        <input type="text" name="Email" placeholder="Email" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="/User/User" method="post">
+            <div class="form-group">
+                <label for="FirstName">First Name:</label>
+                <input type="text" name="FirstName" placeholder="First Name" id="FirstName" required />
+            </div>
+            <div class="form-group">
+                <label for="SecondName">Last Name:</label>
+                <input type="text" name="SecondName" placeholder="Last Name" id="SecondName" required />
+            </div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" placeholder="Email" id="Email" required />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
+</html>
