@@ -13,7 +13,7 @@ namespace CLDVSem2Part3.Controllers
         public ActionResult User(UserModel Users)
         {
             var result = user.insert_User(Users);
-            return RedirectToAction("Privacy", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]

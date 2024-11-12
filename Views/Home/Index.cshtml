@@ -1,8 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model CLDVSem2Part3.Models.OrderModel
+@{
+    ViewData["Title"] = "Order";
+    <p>Enter details of your Order.</p>
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <form action="/Order/Index" method="post">
+        <p>Insert new order description</p>
+        <input type="text" name="Description" placeholder="Description" required>
+       
+        <button type="submit">Submit</button>
+    </form>
+</body>

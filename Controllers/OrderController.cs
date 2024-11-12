@@ -10,14 +10,14 @@ namespace CLDVSem2Part3.Controllers
 
 
         [HttpPost]
-        public ActionResult About(OrderModel Order)
+        public ActionResult Index(OrderModel Order)
         {
             var result = order.insert_order(Order);
-            return RedirectToAction("Privacy", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
-        public ActionResult About()
+        public ActionResult Index()
         {
             return View(order);
         }
